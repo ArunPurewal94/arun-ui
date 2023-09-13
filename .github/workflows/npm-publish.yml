@@ -9,21 +9,16 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 16 # Updated to Node.js 16
-        
-      - name: Install Dependencies
-        run: npm ci
-        
-      - name: Build Library
-        run: npm run build
-        
-      - name: Save Build Artifact
+          node-version: 16
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+      - run: pnpm i
+      - run: pnpm lib build
+      - name: save build artifact
         uses: actions/upload-artifact@v3
         with:
           name: dist
@@ -31,26 +26,24 @@ jobs:
 
   publish-npm:
     runs-on: ubuntu-latest
+    permissions:
+      packages: write
     needs: build
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: 16 # Updated to Node.js 16
+          node-version: 16
           registry-url: 'https://npm.pkg.github.com'
-        env:
-          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-        
-      - name: Download Build Artifact
-        uses: actions/download-artifact@v2 # Update to the latest version if available
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.0.2
+      - name: download artifact
+        uses: actions/download-artifact@v2
         with:
           name: dist
-          path: ./packages/ui/dist-artifact
-      
-      - name: Publish to npm
-        run: npm publish ./packages/ui/dist-artifact --access public
+          path: ./packages/ui/dist
+      - run: pnpm publish --no-git-checks --registry=https://npm.pkg.github.com
+        working-directory: ./packages/ui
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
