@@ -1,1 +1,1 @@
-module.exports = require("@arun/tailwind-config/tailwind.config.cjs");
+module.exports = require("@arun-purewal/tailwind-config/tailwind.config.cjs");

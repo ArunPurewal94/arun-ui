@@ -8,7 +8,7 @@ export default defineConfig({
     lib: {
       entry: "src/main.ts",
       formats: ["es"],
-      name: "@arun-ui",
+      name: "@arunpurewal-ui",
     },
     rollupOptions: {
       external: ["vue"],

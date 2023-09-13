@@ -1,5 +1,5 @@
 {
-    "name": "@arun/tailwind-config",
+    "name": "@arun-purewal/tailwind-config",
     "dependencies": {
         "autoprefixer": "^10.4.15",
         "postcss": "^8.4.29",

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import { ArButton } from "@arun/ui";
+import { ArButton } from "@arun-purewal/ui";
 </script>
 
 <template>
   <div>
-    <ArButton variant="destructive">ArButton</ArButton>
+    <ArButton>ArButton</ArButton>
   </div>
 </template>

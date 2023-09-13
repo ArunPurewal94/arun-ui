@@ -1,11 +1,12 @@
 {
-  "name": "@/arun-ui",
-  "version": "1.0.0",
+  "name": "@arun-purewal/ui",
+  "private": false,
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "client": "pnpm --filter @arun/client",
-    "lib": "pnpm --filter @arun/ui",
+    "client": "pnpm --filter @arun-purewal/client",
+    "lib": "pnpm --filter @arun-purewal/ui",
     "dev": "pnpm --recursive --parallel --stream run dev"
   },
   "keywords": [],
