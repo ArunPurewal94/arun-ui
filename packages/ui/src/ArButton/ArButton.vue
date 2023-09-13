@@ -11,7 +11,7 @@ interface Props {
     | "icon"
     | "destructive";
   size?: "small" | "medium" | "large";
-  extraClasses?: string; // New prop for extra classes
+  extraClasses?: string;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -34,14 +34,13 @@ const sizeClasses = {
   large: "py-3 px-6 text-lg",
 };
 
-const buttonClass = computed(
-  () =>
-    clsx(
-      "btn",
-      variantClasses[props.variant],
-      sizeClasses[props.size],
-      props.extraClasses
-    ) // Include extra classes
+const buttonClass = computed(() =>
+  clsx(
+    "btn",
+    variantClasses[props.variant],
+    sizeClasses[props.size],
+    props.extraClasses
+  )
 );
 </script>
 
