@@ -9,7 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@arun/tailwind-config": "workspace:^",
+    "@arun/tailwind-config": "workspace:^0.0.0",
     "vue": "^3.3.4"
   },
   "devDependencies": {
