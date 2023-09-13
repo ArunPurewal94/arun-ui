@@ -13,7 +13,7 @@
     "url": "https://github.com/ArunPurewal94/arun-ui.git"
   },
   "publishConfig": {
-    "@arunpurewal94:registry": "https://npm.pkg.github.com"
+    "@arunpurewal:registry": "https://npm.pkg.github.com"
   },
   "scripts": {
     "dev": "vite build --watch",
