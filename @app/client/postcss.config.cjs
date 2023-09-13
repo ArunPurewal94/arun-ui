@@ -1,0 +1,1 @@
+module.exports = require("@arun/tailwind-config/postcss.config.cjs");

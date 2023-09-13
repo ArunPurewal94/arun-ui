@@ -1,0 +1,1 @@
+module.exports = require("@arun/tailwind-config/tailwind.config.cjs");
