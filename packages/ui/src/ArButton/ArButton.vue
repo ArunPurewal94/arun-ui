@@ -8,7 +8,7 @@ interface Props {
     | "secondary"
     | "outline"
     | "ghost"
-    | "icon"
+    | "link"
     | "destructive";
   size?: "small" | "medium" | "large";
   extraClasses?: string;
@@ -20,12 +20,12 @@ const props = withDefaults(defineProps<Props>(), {
 });
 
 const variantClasses = {
-  default: "bg-blue-500 text-white rounded",
-  secondary: "bg-green-500 text-white rounded",
-  outline: "border border-blue-500 text-blue-500 rounded",
-  ghost: "text-blue-500",
-  icon: "p-0",
-  destructive: "bg-red-500 text-white rounded",
+  default: "bg-indigo-600 text-white hover:bg-indigo-600/90",
+  secondary: "bg-slate-900 text-white hover:bg-slate-900/80",
+  outline: "border hover:bg-gray-900 hover:text-white",
+  ghost: "hover:bg-slate-900 hover:text-white",
+  link: "text-gray-900 underline-offset-4 hover:underline",
+  destructive: "bg-red-600 text-white hover:bg-red-600/90",
 };
 
 const sizeClasses = {
@@ -36,7 +36,7 @@ const sizeClasses = {
 
 const buttonClass = computed(() =>
   clsx(
-    "btn",
+    "inline-flex items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50",
     variantClasses[props.variant],
     sizeClasses[props.size],
     props.extraClasses

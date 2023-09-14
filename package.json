@@ -1,8 +1,8 @@
 {
   "name": "@arun-purewal/ui",
   "private": false,
-  "version": "1.0.1",
-  "description": "",
+  "version": "2.1.0",
+  "description": "A Vue component library with tailwindcss",
   "main": "index.js",
   "scripts": {
     "client": "pnpm --filter @arun-purewal/client",
@@ -10,7 +10,7 @@
     "dev": "pnpm --recursive --parallel --stream run dev"
   },
   "keywords": [],
-  "author": "",
+  "author": "Arun Purewal",
   "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^6.7.0",

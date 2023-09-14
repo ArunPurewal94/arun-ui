@@ -1,9 +1,15 @@
 <script setup lang="ts">
-import { ArButton } from "@arun-purewal/ui";
+import { RouterView } from "vue-router";
+import Navbar from "./components/Navbar.vue";
+import Sidebar from "./components/Sidebar.vue";
 </script>
 
 <template>
-  <div>
-    <ArButton>ArButton</ArButton>
-  </div>
+  <main>
+    <Navbar />
+    <Sidebar />
+    <div class="mt-5">
+      <RouterView />
+    </div>
+  </main>
 </template>
