@@ -12,6 +12,7 @@ interface Props {
     | "destructive";
   size?: "small" | "medium" | "large";
   extraClasses?: string;
+  onClick?: () => void;
 }
 
 const props = withDefaults(defineProps<Props>(), {
@@ -45,7 +46,7 @@ const buttonClass = computed(() =>
 </script>
 
 <template>
-  <button :class="buttonClass">
+  <button :class="buttonClass" :click="onClick">
     <slot />
   </button>
 </template>

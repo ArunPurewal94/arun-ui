@@ -17,8 +17,8 @@ const closeSidebar = () => {
     class="fixed top-0 left-0 z-40 w-64 h-screen transition-transform bg-white shadow border-r"
     aria-label="Sidebar"
   >
-    <div class="flex items-center justify-between p-4">
-      <h2 class="text-lg font-semibold">@arunpurewal/ui</h2>
+    <div class="flex items-center justify-between p-4 border-b">
+      <h2 class="text-lg font-semibold">@arun-purewal/ui</h2>
       <button
         @click="closeSidebar"
         class="p-2 text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"

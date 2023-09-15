@@ -26,7 +26,7 @@ const toggleSidebar = () => {
         />
       </svg>
     </button>
-    <h1 class="font-bold">@arunpurewal/ui</h1>
+    <h1 class="font-bold">@arun-purewal/ui</h1>
     <h1 class="font-semibold">Github</h1>
   </nav>
 </template>
