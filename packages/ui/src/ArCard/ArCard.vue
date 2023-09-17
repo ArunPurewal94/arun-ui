@@ -23,7 +23,7 @@ const props = withDefaults(defineProps<CardProps>(), {
   <div
     :class="
       clsx(
-        'max-w-sm bg-white border border-gray-200 rounded-lg shadow',
+        'max-w-sm bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg',
         userClass
       )
     "
