@@ -1,7 +1,7 @@
 {
   "name": "@arun-purewal/ui",
   "private": false,
-  "version": "2.0.5",
+  "version": "2.1.0",
   "type": "module",
   "module": "./dist/ui.js",
   "types": "./dist/src/main.d.ts",
@@ -24,12 +24,12 @@
     "clsx": "^2.0.0",
     "vue": "^3.3.4"
   },
-  "bundledDependencies": ["@arun-purewal/tailwind-config"],
+  "bundledDependencies": ["@arun/tailwind-config"],
   "peerDependencies": {
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "@arun-purewal/tailwind-config": "workspace:^0.0.0",    
+    "@arun/tailwind-config": "workspace:^0.0.0",    
     "@vitejs/plugin-vue": "^4.2.3",
     "typescript": "^5.0.2",
     "vite": "^4.4.5",

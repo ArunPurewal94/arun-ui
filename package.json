@@ -1,11 +1,10 @@
 {
   "name": "@arun-purewal/ui",
-  "private": false,
-  "version": "2.1.0",
-  "description": "A Vue component library with tailwindcss",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "client": "pnpm --filter @arun-purewal/client",
+    "client": "pnpm --filter @arun/client",
     "lib": "pnpm --filter @arun-purewal/ui",
     "dev": "pnpm --recursive --parallel --stream run dev"
   },
