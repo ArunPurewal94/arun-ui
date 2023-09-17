@@ -1,15 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: [
-    "**/*/index.html",
-    "**/*.{js,ts,jsx,tsx,vue}",
-  ],
+  content: ["**/*/index.html", "**/*.{js,ts,jsx,tsx,vue}"],
   theme: {
-    extend: {
-      colors: {
-        "brand-main": "#414066"
-      }
-    },
+    extend: {},
   },
   plugins: [],
-}
+};

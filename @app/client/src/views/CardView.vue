@@ -18,7 +18,7 @@ import { ArCard } from "@arun-purewal/ui";
       <pre class="bg-gray-800 rounded-lg p-4">
   <code class="text-sm sm:text-base flex justify-center items-center space-x-4 text-white">
     import { ArCard } from '@arun-purewal/ui';
-    &lt;ArCard image="image src" title="My Title" description="My Description" link="path for link" /&gt;
+    &lt;ArCard image="image src" title="My Title" description="My Description" link="path for link" userClass="custom class" /&gt;
   </code>
 </pre>
     </div>
